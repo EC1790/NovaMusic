@@ -1,0 +1,67 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    color: goldenrod;
+    text-align: center;
+}
+
+h2 {
+    color: goldenrod;
+}
+
+p {
+    color: black;
+}
+
+
+.navbar {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+}
+
+.navbar ul li.name{
+    font-size: 24px; 
+    font-weight: bold;
+    color: goldenrod;
+    text-transform: uppercase;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.banner {
+    Width: 970px;
+    Height: 250px;
+}
