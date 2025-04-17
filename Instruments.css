@@ -64,14 +64,14 @@ body {
     align-items: center;
   }
   
-  /* Default nav links */
+  
   .navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
   }
   
-  /* Highlight Nova and Music */
+
   .navbar .name a {
     background-color: goldenrod;
     color: black;
