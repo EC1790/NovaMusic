@@ -61,21 +61,4 @@ h2 {
     Height: 250px;
 }
 
-
-
-#calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    padding: 20px;
-}
-
-.day {
-    border: 1px solid #ddd;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.selected {
-    background-color: lightblue;
-}
+label, input, select, button { display: block; margin: 10px 0; }
