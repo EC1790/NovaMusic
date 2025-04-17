@@ -1,27 +1,35 @@
 
-document.addEventListener("DOMContentLoaded", function () {
-    const calendar = document.getElementById("calendar");
-    const form = document.getElementById("appointmentForm");
-    
-    function generateCalendar(month, year) {
-        calendar.innerHTML = ""; // Clear previous month
-        let daysInMonth = new Date(year, month + 1, 0).getDate();
+const form = document.getElementById("appointmentForm");
+const appointmentList = document.getElementById("appointmentList");
 
-        for (let day = 1; day <= daysInMonth; day++) {
-            let dayElement = document.createElement("div");
-            dayElement.className = "day";
-            dayElement.textContent = day;
-            calendar.appendChild(dayElement);
-        }
-    }
 
-    let currentDate = new Date();
-    generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
+let appointments = [];
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        let date = document.getElementById("appointmentDate").value;
-        let title = document.getElementById("appointmentTitle").value;
-        alert(`Appointment on ${date}: ${title}`);
-    });
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const teacher = document.getElementById("teacher").value;
+
+ 
+  const appointment = { date, time, teacher };
+
+
+  appointments.push(appointment);
+
+ 
+  renderAppointments();
+  
+
+  form.reset();
 });
+
+function renderAppointments() {
+  appointmentList.innerHTML = "";
+  appointments.forEach((appt, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${appt.date} at ${appt.time} with ${appt.teacher}`;
+    appointmentList.appendChild(li);
+  });
+}
