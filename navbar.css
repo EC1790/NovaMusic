@@ -15,7 +15,12 @@
     align-items: center;
   }
   
-  
+  .navbar ul li.name{
+    font-size: 24px; 
+    font-weight: bold;
+    color: goldenrod;
+    text-transform: uppercase;
+}
   .navbar a {
     color: white;
     text-decoration: none;
@@ -23,12 +28,7 @@
   }
   
 
-  .navbar ul li.name{
-    font-size: 24px; 
-    font-weight: bold;
-    color: goldenrod;
-    text-transform: uppercase;
-}
+ 
   
   
   
