@@ -3,12 +3,11 @@ const appointmentList = document.getElementById("appointmentList");
 
 let appointments = [];
 
-// 🔄 Load appointments from local storage when the page loads
 window.addEventListener("load", function () {
   const stored = localStorage.getItem("appointments");
 
   if (stored) {
-    appointments = JSON.parse(stored); // convert back to array
+    appointments = JSON.parse(stored);
     renderAppointments();
   }
 });
@@ -23,7 +22,7 @@ form.addEventListener("submit", function (e) {
   const appointment = { date, time, teacher };
   appointments.push(appointment);
 
-  // 💾 Save the updated array to local storage
+  
   localStorage.setItem("appointments", JSON.stringify(appointments));
 
   renderAppointments();
