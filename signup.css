@@ -33,7 +33,7 @@ body {
 }
 
 .container-calendar #left h1 {
-	color: green;
+	color: goldenrod;
 	text-align: center;
 	background-color: #f2f2f2;
 	margin: 0;
@@ -41,7 +41,7 @@ body {
 }
 
 #event-section h3 {
-	color: green;
+	color: goldenrod;
 	font-size: 18px;
 	margin: 0;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 #event-section button {
-	background: green;
+	background: black;
 	color: white;
 	border: none;
 	padding: 5px 10px;
