@@ -169,7 +169,7 @@ body {
 
 /* Day-specific styling */
 .date-picker:nth-child(1) {
-	color: red;
+	color: goldenrod;
 	/* Sunday */
 }
 
@@ -180,7 +180,7 @@ body {
 
 /* Hover effect for date cells */
 .date-picker:hover {
-	background-color: green;
+	background-color: goldenrod;
 	color: white;
 	cursor: pointer;
 }
