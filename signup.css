@@ -123,7 +123,7 @@ body {
 
 /* Style for the delete buttons */
 .delete-event {
-	background: goldenrod(237, 19, 19);
+	background: goldenrod;
 	color: white;
 	border: none;
 	padding: 5px 10px;
@@ -174,7 +174,7 @@ body {
 }
 
 .date-picker:nth-child(6) {
-	color: green;
+	color: goldenrod;
 	/* Friday */
 }
 
