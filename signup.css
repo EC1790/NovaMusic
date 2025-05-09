@@ -169,12 +169,12 @@ body {
 
 /* Day-specific styling */
 .date-picker:nth-child(1) {
-	color: goldenrod;
+	color: black;
 	/* Sunday */
 }
 
 .date-picker:nth-child(6) {
-	color: goldenrod;
+	color: black;
 	/* Friday */
 }
 
