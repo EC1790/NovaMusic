@@ -169,12 +169,6 @@ body {
 	
 }
 
-.date-picker:nth-child(6) {
-	color: black;
-	
-}
-
-
 .date-picker:hover {
 	background-color: goldenrod;
 	color: white;
