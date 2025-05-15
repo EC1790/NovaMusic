@@ -15,8 +15,6 @@
 <body>
 	<div id="navbar"></div>
       <script src="loadNavbar.js"></script>
-
-  <!-- Main wrapper for the calendar application -->
 	<div class="wrapper">
 		<div class="container-calendar">
 			<div id="left">
@@ -36,7 +34,7 @@
 				</div>
 				<div id="reminder-section">
 					<h3>Reminders</h3>
-					<!-- List to display reminders -->
+					
 					<ul id="reminderList">
 						<li data-event-id="1">
 							<strong>Event Title</strong>
@@ -65,12 +63,12 @@
 					id="calendar"
 					data-lang="en">
 					<thead id="thead-month"></thead>
-					<!-- Table body for displaying the calendar -->
+					
 					<tbody id="calendar-body"></tbody>
 				</table>
 				<div class="footer-container-calendar">
 					<label for="month">Jump To: </label>
-					<!-- Dropdowns to select a specific month and year -->
+					
 					<select id="month" onchange="jump()">
 						<option value=0>Jan</option>
 						<option value=1>Feb</option>
@@ -85,13 +83,13 @@
 						<option value=10>Nov</option>
 						<option value=11>Dec</option>
 					</select>
-					<!-- Dropdown to select a specific year -->
+					
 					<select id="year" onchange="jump()"></select>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Include the JavaScript file for the calendar functionality -->
+	
 	<script src="signup.js"></script>
 </body>
 

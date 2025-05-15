@@ -143,7 +143,7 @@ monthAndYear =
 	document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
-// Function to navigate to the next month
+
 function next() {
 	currentYear = currentMonth === 11 ?
 		currentYear + 1 : currentYear;
@@ -151,7 +151,7 @@ function next() {
 	showCalendar(currentMonth, currentYear);
 }
 
-// Function to navigate to the previous month
+
 function previous() {
 	currentYear = currentMonth === 0 ?
 		currentYear - 1 : currentYear;
@@ -160,14 +160,14 @@ function previous() {
 	showCalendar(currentMonth, currentYear);
 }
 
-// Function to jump to a specific month and year
+
 function jump() {
 	currentYear = parseInt(selectYear.value);
 	currentMonth = parseInt(selectMonth.value);
 	showCalendar(currentMonth, currentYear);
 }
 
-// Function to display the calendar
+
 function showCalendar(month, year) {
 	let firstDay = new Date(year, month, 1).getDay();
 	tbl = document.getElementById("calendar-body");
@@ -204,7 +204,7 @@ function showCalendar(month, year) {
 					cell.className = "date-picker selected";
 				}
 
-				// Check if there are events on this date
+				
 				if (hasEventOnDate(date, month, year)) {
 					cell.classList.add("event-marker");
 					cell.appendChild(
@@ -222,7 +222,7 @@ function showCalendar(month, year) {
 	displayReminders();
 }
 
-// Function to create an event tooltip
+
 function createEventTooltip(date, month, year) {
 	let tooltip = document.createElement("div");
 	tooltip.className = "event-tooltip";
@@ -240,7 +240,7 @@ function createEventTooltip(date, month, year) {
 	return tooltip;
 }
 
-// Function to get events on a specific date
+
 function getEventsOnDate(date, month, year) {
 	return events.filter(function (event) {
 		let eventDate = new Date(event.date);
@@ -252,15 +252,15 @@ function getEventsOnDate(date, month, year) {
 	});
 }
 
-// Function to check if there are events on a specific date
+
 function hasEventOnDate(date, month, year) {
 	return getEventsOnDate(date, month, year).length > 0;
 }
 
-// Function to get the number of days in a month
+
 function daysInMonth(iMonth, iYear) {
 	return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
-// Call the showCalendar function initially to display the calendar
+
 showCalendar(currentMonth, currentYear);
