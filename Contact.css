@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fdfdfd;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     color: #333;
   }
   
@@ -13,7 +13,7 @@ body {
     margin-bottom: 40px;
   }
   
-  /* Grid layout for the cards */
+  
   .contact-grid {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
   }
   
-  /* Each card takes ~45% of width for two in a row */
+  
   .contact-card {
     background-color: #fff8e1;
     border: 1px solid #ffd54f;
@@ -43,7 +43,7 @@ body {
     margin-bottom: 10px;
     color: #555;
   }
-  
+
   .contact-card a {
     color: #0073e6;
     text-decoration: none;
