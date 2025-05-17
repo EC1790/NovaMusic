@@ -100,7 +100,7 @@ currentYear = today.getFullYear();
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
-createYear = generate_year_range(2024, 2050);
+createYear = generate_year_range(2020, 2050);
 
 document.getElementById("year").innerHTML = createYear;
 
