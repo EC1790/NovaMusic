@@ -1,11 +1,9 @@
-/* Lessons.css */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
-    color: goldenrod;
     
   }
   
@@ -18,11 +16,12 @@ body {
   h1 {
     font-size: 48px;
     text-align: center;
+    color:goldenrod;
   }
   
   h2 {
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-size: 30px;
+    margin-top: 30px;
   }
   
   ul {
