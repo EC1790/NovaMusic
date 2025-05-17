@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    
+    color: black;
   }
   
   .container {
@@ -22,6 +22,7 @@ body {
   h2 {
     font-size: 30px;
     margin-top: 30px;
+    color: goldenrod
   }
   
   ul {
