@@ -130,7 +130,7 @@ for (dhead in days) {
 		days[dhead] + "'>" +
 		days[dhead] + "</th>";
 }
-$dataHead += "</tr>";
+dataHead += "</tr>";
 
 document.getElementById("thead-month").innerHTML = $dataHead;
 
