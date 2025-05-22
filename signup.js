@@ -15,22 +15,20 @@ let reminderList =
 let eventIdCounter = 1;
 
 
-function addEvent() {
+async function addEvent() {
 	let date = eventDateInput.value;
 	let title = eventTitleInput.value;
 	let description = eventDescriptionInput.value;
 
 	if (date && title) {
-		
-		let eventId = eventIdCounter++;
+		const response = await fetch(API_URL, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ date, title, description }),
+		});
 
-		events.push(
-			{
-				id: eventId, date: date,
-				title: title,
-				description: description
-			}
-		);
+		const newEvent = await response.json();
+		events.push(newEvent);
 		showCalendar(currentMonth, currentYear);
 		eventDateInput.value = "";
 		eventTitleInput.value = "";
@@ -39,15 +37,13 @@ function addEvent() {
 	}
 }
 
+async function deleteEvent(eventId) {
+	await fetch(`${API_URL}/${eventId}`, {
+		method: "DELETE",
+	});
 
-function deleteEvent(eventId) {
-	
-	let eventIndex =
-		events.findIndex((event) =>
-			event.id === eventId);
-
+	let eventIndex = events.findIndex((event) => event.id === eventId);
 	if (eventIndex !== -1) {
-		
 		events.splice(eventIndex, 1);
 		showCalendar(currentMonth, currentYear);
 		displayReminders();
@@ -257,5 +253,11 @@ function daysInMonth(iMonth, iYear) {
 	return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
+async function loadEventsFromDB() {
+	const response = await fetch(API_URL);
+	events = await response.json();
+	showCalendar(currentMonth, currentYear);
+}
 
-showCalendar(currentMonth, currentYear);
+
+loadEventsFromDB();
