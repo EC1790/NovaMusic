@@ -14,7 +14,7 @@ let reminderList =
 
 let eventIdCounter = 1;
 
-
+const API_URL = "http://localhost:3000/events";
 async function addEvent() {
 	let date = eventDateInput.value;
 	let title = eventTitleInput.value;
