@@ -1,4 +1,4 @@
-/* Page background */
+
 body {
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,7 +8,7 @@ body {
     color: black;
 }
 
-/* Main title */
+
 h1 {
     font-size: 50px;
     color: goldenrod;
@@ -17,7 +17,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Section headers */
+
 h2 {
     color: goldenrod;
     font-size: 28px;
@@ -27,7 +27,7 @@ h2 {
     padding-left: 10px;
 }
 
-/* Paragraph text */
+
 p {
     color: black;
     font-size: 16px;
@@ -37,7 +37,7 @@ p {
     margin-right: auto;
 }
 
-/* List items */
+
 ul {
     max-width: 800px;
     margin: 0 auto 20px auto;
@@ -48,7 +48,7 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Optional: style output area */
+
 #output {
     display: block;
     margin-top: 40px;
