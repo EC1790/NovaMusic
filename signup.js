@@ -1,6 +1,10 @@
 const API_URL = "http://localhost:3000/events";
 let events = [];
 
+let today = new Date();
+let currentMonth = today.getMonth();
+let currentYear = today.getFullYear();
+
 
 let eventDateInput =
 	document.getElementById("eventDate");
