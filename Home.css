@@ -37,14 +37,14 @@ p {
 }
 
 
-ul {
+services.ul {
     max-width: 800px;
     margin: 0 auto 20px auto;
     padding-left: 40px;
     color: #444;
 }
 
-ul li {
+services.ul li {
     margin-bottom: 10px;
     font-size: 16px;
 }
