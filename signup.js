@@ -132,7 +132,7 @@ for (dhead in days) {
 }
 dataHead += "</tr>";
 
-document.getElementById("thead-month").innerHTML = $dataHead;
+document.getElementById("thead-month").innerHTML = dataHead;
 
 monthAndYear =
 	document.getElementById("monthAndYear");
