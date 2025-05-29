@@ -258,10 +258,16 @@ function daysInMonth(iMonth, iYear) {
 }
 
 async function loadEventsFromDB() {
-	const response = await fetch(API_URL);
-	events = await response.json();
-	showCalendar(currentMonth, currentYear);
+	try {
+		const response = await fetch(API_URL);
+		if (!response.ok) {
+			throw new Error(`Server error: ${response.status}`);
+		}
+		events = await response.json();
+		showCalendar(currentMonth, currentYear);
+	} catch (error) {
+		console.error("Error loading events:", error.message);
+	}
 }
-
 
 loadEventsFromDB();
