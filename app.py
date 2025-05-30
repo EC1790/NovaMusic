@@ -5,7 +5,7 @@ import sqlite3
 app = Flask(__name__)
 CORS(app)
 
-# Connect to SQLite and create table if it doesn't exist
+
 def init_db():
     conn = sqlite3.connect("events.db")
     cursor = conn.cursor()
