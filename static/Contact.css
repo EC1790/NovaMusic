@@ -35,6 +35,31 @@ body {
     max-width: 500px;
   }
   
+  .Cpfp {
+    margin-top: 15px;
+    text-align: center; 
+  }
+  
+  .Cpfp img {
+    max-width: 100%;    /* Ensures image never overflows its container */
+    height: auto;       /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+    display: block;     /* Removes extra space below image */
+    margin: 0 auto;     
+  }
+
+  .Bpfp {
+    margin-top: 15px;
+    text-align: center; 
+  }
+  
+  .Bpfp img {
+    max-width: 30%;    /* Ensures image never overflows its container */
+    height: 40% ;       /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+    display: block;     /* Removes extra space below image */
+    margin: 0 auto;     
+  }
   .contact-card h2 {
     color: #c29300;
   }
