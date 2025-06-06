@@ -58,7 +58,7 @@ function displayReminders() {
 	reminderList.innerHTML = "";
 	for (let i = 0; i < events.length; i++) {
 		let event = events[i];
-		let eventDate = new Date(event.date);
+		let eventDate = new Date(event.date + "T00:00:00");
 		if (eventDate.getMonth() ===
 			currentMonth &&
 			eventDate.getFullYear() ===
@@ -238,7 +238,7 @@ function createEventTooltip(date, month, year) {
 
 function getEventsOnDate(date, month, year) {
 	return events.filter(function (event) {
-		let eventDate = new Date(event.date);
+		let eventDate = new Date(event.date + "T00:00:00");
 		return (
 			eventDate.getDate() === date &&
 			eventDate.getMonth() === month &&
