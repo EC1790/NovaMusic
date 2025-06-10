@@ -25,12 +25,12 @@ body {
     color: goldenrod
   }
   
-  ul {
+  .moneyInfo ul {
     list-style: none;
     padding: 0;
   }
   
-  li {
+  .moneyInfo li {
     margin: 10px 0;
   }
   

@@ -1,3 +1,10 @@
+/* The css page for the contact page. Kept the black,gold and white theme
+General body and h1 css follows theme
+Each person is made a contact card of sorts around their name, info and photo
+Photo had css as well to format it well
+
+*/
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fdfdfd;
@@ -35,31 +42,45 @@ body {
     max-width: 500px;
   }
   
-  .Cpfp {
+  #Cpfp {
     margin-top: 15px;
     text-align: center; 
   }
   
-  .Cpfp img {
-    max-width: 100%;    /* Ensures image never overflows its container */
-    height: auto;       /* Maintains aspect ratio */
-    border-radius: 8px; /* Optional: Rounds the corners of the image */
-    display: block;     /* Removes extra space below image */
+  #Cpfp img {
+    max-width: 100%;    
+    height: auto;       
+    border-radius: 8px; 
+    display: block;     
     margin: 0 auto;     
   }
 
-  .Bpfp {
+  #Bpfp {
     margin-top: 15px;
     text-align: center; 
   }
   
-  .Bpfp img {
-    max-width: 30%;    /* Ensures image never overflows its container */
-    height: 40% ;       /* Maintains aspect ratio */
-    border-radius: 8px; /* Optional: Rounds the corners of the image */
-    display: block;     /* Removes extra space below image */
+  #Bpfp img {
+    max-width: 95%;    
+    height: 75%;       
+    border-radius: 8px; 
+    display: block;     
     margin: 0 auto;     
   }
+
+  #Epfp {
+    margin-top: 15px;
+    text-align: center; 
+  }
+  
+  #Epfp img {
+    max-width: 80%;    
+    height: 80%;       
+    border-radius: 8px; 
+    display: block;     
+    margin: 0 auto;     
+  }
+
   .contact-card h2 {
     color: #c29300;
   }

@@ -1,3 +1,8 @@
+/* Navbar css connects with the navbar html page
+This goes over the ul,li and a formatting for the regular part
+Div for the name and logo making it slightly different font and formatting
+*/
+
 .navbar ul {
     display: flex;
     justify-content: center;
