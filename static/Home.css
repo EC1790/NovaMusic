@@ -5,7 +5,6 @@ Services is pretty standard styling maintaing margins and colors
 body {
     background-color: white;
     font-family: Arial, sans-serif;
-    
     margin: 0;
     padding: 0;
     color: #333;
@@ -47,6 +46,7 @@ p {
     list-style-position: inside;
     color: #444;
 }
+
 
 /*#services ul li {
     margin-bottom: 10px;

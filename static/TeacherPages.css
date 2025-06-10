@@ -2,7 +2,7 @@ body {
     
     background-color: white;
     font-family: Arial, sans-serif;
-    
+    overflow: scroll;
     margin: 0;
     padding: 0;
     color: #333;
@@ -39,5 +39,11 @@ img {
     display: flex;
     flex-direction: row;
 }
+
+#navbar, .navbar {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  
 
   
