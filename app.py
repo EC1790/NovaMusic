@@ -36,9 +36,9 @@ def Instruments():
 def Lessons():
     return render_template("lessons.html");
 
-@app.route('/BC')
-def BC():
-    return render_template("BC.html");
+@app.route('/ET')
+def ET():
+    return render_template("ET.html");
 
 @app.route('/EC')
 def EC():

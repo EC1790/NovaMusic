@@ -1,5 +1,9 @@
+/* Css page for all teacher html pages EC, ET, KD, TC.
+Styles the body, and headings
+Also has divs img-container to help format the image 
+Background and contact divs to format those texts well
+*/
 body {
-    
     background-color: white;
     font-family: Arial, sans-serif;
     overflow: scroll;
