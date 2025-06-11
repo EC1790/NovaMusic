@@ -1,3 +1,8 @@
+'''app.py provides methods for managing calendar events, including adding,
+    retrieving, and deleting events from the database. It interfaces with an
+    SQLite backend and is designed to support API operations in a Flask
+    web application.
+'''
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import sqlite3
@@ -20,6 +25,7 @@ def init_db():
     conn.commit()
     conn.close()
 
+'''Routes to all the different pages'''
 @app.route('/')
 def index():
     return render_template("index.html");
@@ -55,11 +61,8 @@ def TC():
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html");
-# @app.route('/navbar')
-# def navbar():
-#     return render_template("navbar.html");
     
-
+'''Gets events from the db'''
 @app.route('/events', methods=['GET'])
 def get_events():
     conn = sqlite3.connect("events.db")
@@ -74,6 +77,7 @@ def get_events():
     ]
     return jsonify(events)
 
+'''Adds events into the db'''
 @app.route('/events', methods=['POST'])
 def add_event():
     data = request.get_json()
@@ -93,6 +97,7 @@ def add_event():
 
     return jsonify({"id": new_id, "date": date, "title": title, "description": description})
 
+'''Deletes events from the db'''
 @app.route('/events/<int:event_id>', methods=['DELETE'])
 def delete_event(event_id):
     conn = sqlite3.connect("events.db")

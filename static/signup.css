@@ -1,3 +1,8 @@
+/* Css file for the sign up page connects to the signup.html page
+Uses divs like container-calendar, event-section,event marker, event tooltip, reminder section, date picker,
+table calendar, footer, etc. 
+Styled the page using different formatting while keeping the consitent color them of black,gold, and white
+*/
 
 body {
 	background-color: white;
@@ -13,7 +18,8 @@ body {
 	margin: 15px auto;
 }
 
-
+/* Holds both the left (event/reminder) and right (calendar) sections;
+uses flexbox for side-by-side layout, adds padding and box-shadow for visual separation. */
 .container-calendar {
 	background: #ffffff;
 	padding: 15px;
@@ -25,13 +31,16 @@ body {
 	justify-content: space-between;
 }
 
-
+/* Section on the left for adding new events (date, title, description).
+Slight border and background to stand out
+*/
 #event-section {
 	padding: 10px;
 	background: #f5f5f5;
 	margin: 20px 0;
 	border: 1px solid #ccc;
 }
+
 
 .container-calendar #left h1 {
 	color: goldenrod;
@@ -77,7 +86,11 @@ body {
 	bottom: 0;
 	left: 0;
 }
-
+/* Styles the tooltip that appears when hovering over an event marker on the calendar.
+The tooltip is absolutely positioned above the date,
+with a semi-transparent background, padding, and a subtle box-shadow for readability.
+It has the event detail
+*/ 
 .event-tooltip {
 	position: absolute;
 	background-color: rgba(234, 232, 232, 0.763);
@@ -97,7 +110,9 @@ body {
 	display: block;
 }
 
-
+/* Section on the left for displaying the list of reminders/events.
+Styled similarly to event-section for visual consistency.
+*/
 #reminder-section {
 	padding: 10px;
 	background: #f5f5f5;
@@ -111,6 +126,8 @@ body {
 	margin: 0;
 }
 
+/* List for the reminders
+*/
 #reminderList {
 	list-style: none;
 	padding: 0;
@@ -154,8 +171,8 @@ body {
 	text-align: center;
 	vertical-align: top;
 }
-
-
+/* CSS for the Date picker to pick the date of the event makes sure it is readible
+*/
 .date-picker.selected {
 	background-color: #f2f2f2;
 	font-weight: bold;

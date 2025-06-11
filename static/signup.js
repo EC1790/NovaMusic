@@ -1,3 +1,8 @@
+/* The js of signup, connected to signup.html
+saves events in an array and saves their dates
+has the addEvent, deleteEvent, displayReminders, createEventTooltip and showCalendar
+main functions with a lot helper functions.
+*/
 const API_URL = "http://localhost:5000/events";
 let events = [];
 
@@ -18,7 +23,9 @@ let reminderList =
 
 let eventIdCounter = 1;
 
-
+/* Adds events to the sql database by taking it's id and fields and sending a post request to the api
+Adds to the events array
+*/
 async function addEvent() {
 	let date = eventDateInput.value;
 	let title = eventTitleInput.value;
@@ -41,6 +48,8 @@ async function addEvent() {
 	}
 }
 
+/* Sends a delete message to the api and removes the event from the array
+*/
 async function deleteEvent(eventId) {
 	await fetch(`${API_URL}/${eventId}`, {
 		method: "DELETE",
@@ -53,6 +62,9 @@ async function deleteEvent(eventId) {
 		displayReminders();
 	}
 }
+/* Displays reminders by going through the array making sure the month and year matches
+Displays in the reminders section
+*/
 
 function displayReminders() {
 	reminderList.innerHTML = "";
@@ -162,7 +174,9 @@ function jump() {
 	showCalendar(currentMonth, currentYear);
 }
 
-
+/* Generates and displays a monthly calendar grid for a given month and year,
+ puting each day cell and highlighting special dates such as the current day and those with events.
+*/
 function showCalendar(month, year) {
 	let firstDay = new Date(year, month, 1).getDay();
 	tbl = document.getElementById("calendar-body");
@@ -217,14 +231,16 @@ function showCalendar(month, year) {
 	displayReminders();
 }
 
-
+/* Makes a tooltip element displaying all events scheduled for a specific date
+Which can be shown when a user hovers over or interacts with a calendar cell.
+*/
 function createEventTooltip(date, month, year) {
 	let tooltip = document.createElement("div");
 	tooltip.className = "event-tooltip";
 	let eventsOnDate = getEventsOnDate(date, month, year);
 	for (let i = 0; i < eventsOnDate.length; i++) {
 		let event = eventsOnDate[i];
-		let eventDate = new Date(event.date);
+		let eventDate = new Date(event.date + "T00:00:00");
 		let eventText = `<strong>${event.title}</strong> - 
 			${event.description} on 
 			${eventDate.toLocaleDateString()}`;
@@ -256,7 +272,9 @@ function hasEventOnDate(date, month, year) {
 function daysInMonth(iMonth, iYear) {
 	return 32 - new Date(iYear, iMonth, 32).getDate();
 }
-
+/*Retrieves the list of events from a backend database via an API call
+Updates the calendar view accordingly.
+*/
 async function loadEventsFromDB() {
 	try {
 		const response = await fetch(API_URL);
