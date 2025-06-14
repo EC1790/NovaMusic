@@ -107,6 +107,8 @@ def delete_event(event_id):
     conn.close()
     return '', 200
 
+init_db()  # Always run this when the app starts
+
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
+
