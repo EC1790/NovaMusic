@@ -1,8 +1,12 @@
+/* Instruments css page links to instruments.html. Uses divs like instrument.
+Styles using goldenrod, black and white
+*/
 body {
     background-color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: scroll;
   }
   
   h1 {
@@ -47,43 +51,3 @@ body {
   }
   
  
-  .navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    background-color: black;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-  }
-  
-  .navbar li {
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-
-  .navbar ul li.name{
-    font-size: 24px; 
-    font-weight: bold;
-    color: goldenrod;
-    text-transform: uppercase;
-}
-  
-  
-  
-  
-  .logo img {
-    width: 100px;
-    height: 100px;
-  }
-  
