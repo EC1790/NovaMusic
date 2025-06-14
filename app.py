@@ -61,6 +61,11 @@ def TC():
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html");
+
+@app.route('/navbar')
+def navbar():
+    return render_template('navbar.html')
+
     
 '''Gets events from the db'''
 @app.route('/events', methods=['GET'])
