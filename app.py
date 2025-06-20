@@ -58,6 +58,11 @@ def KD():
 def TC():
     return render_template("TC.html");
 
+@app.route('/JK')
+def JK():
+    return render_template("JK.html");
+
+
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html");
