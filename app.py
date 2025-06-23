@@ -62,6 +62,10 @@ def TC():
 def JK():
     return render_template("JK.html");
 
+@app.route('/FH')
+def FH():
+    return render_template("FH.html");
+
 
 @app.route('/SignUp')
 def SignUp():
