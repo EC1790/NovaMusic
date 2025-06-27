@@ -28,53 +28,52 @@ def init_db():
 '''Routes to all the different pages'''
 @app.route('/')
 def index():
-    return render_template("index.html");
+    return render_template("index.html")
 
 @app.route('/Contact')
 def Contact():
-    return render_template("Contact.html");
+    return render_template("Contact.html")
 
 @app.route('/Instruments')
 def Instruments():
-    return render_template("Instruments.html");
+    return render_template("Instruments.html")
 
 @app.route('/Lessons')
 def Lessons():
-    return render_template("lessons.html");
+    return render_template("lessons.html")
 
 @app.route('/ET')
 def ET():
-    return render_template("ET.html");
+    return render_template("ET.html")
 
 @app.route('/EC')
 def EC():
-    return render_template("EC.html");
+    return render_template("EC.html")
 
 @app.route('/KD')
 def KD():
-    return render_template("KD.html");
+    return render_template("KD.html")
 
 @app.route('/TC')
 def TC():
-    return render_template("TC.html");
+    return render_template("TC.html")
 
 @app.route('/JK')
 def JK():
-    return render_template("JK.html");
+    return render_template("JK.html")
 
 @app.route('/FH')
 def FH():
-    return render_template("FH.html");
+    return render_template("FH.html")
 
 
 @app.route('/SignUp')
 def SignUp():
-    return render_template("signup.html");
+    return render_template("signup.html")
 
 @app.route('/navbar')
 def navbar():
     return render_template('navbar.html')
-
     
 '''Gets events from the db'''
 @app.route('/events', methods=['GET'])
