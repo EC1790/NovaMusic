@@ -66,6 +66,9 @@ def JK():
 def FH():
     return render_template("FH.html")
 
+@app.route('/VS')
+def VS():
+    return render_template("VS.html")
 
 @app.route('/SignUp')
 def SignUp():
