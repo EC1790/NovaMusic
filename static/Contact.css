@@ -2,99 +2,136 @@
 General body and h1 css follows theme
 Each person is made a contact card of sorts around their name, info and photo
 Photo had css as well to format it well
-
 */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fdfdfd;
-    margin: 0;
-    padding: 0px;
-    color: #333;
-  }
-  
-  h1 {
-    text-align: center;
-    color: goldenrod;
-    font-size: 48px;
-    margin-bottom: 40px;
-  }
-  
-  
-  .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  
-  .contact-card {
-    background-color: #fff8e1;
-    border: 1px solid #ffd54f;
-    border-radius: 12px;
-    padding: 20px;
-    flex: 1 1 calc(45% - 30px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 280px;
-    max-width: 500px;
-  }
-  
-  #Cpfp {
-    margin-top: 15px;
-    text-align: center; 
-  }
-  
-  #Cpfp img {
-    max-width: 100%;    
-    height: auto;       
-    border-radius: 8px; 
-    display: block;     
-    margin: 0 auto;     
-  }
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0px;
+  color: #333;
+}
 
-  #Bpfp {
-    margin-top: 15px;
-    text-align: center; 
-  }
-  
-  #Bpfp img {
-    max-width: 95%;    
-    max-height: 75%;       
-    border-radius: 8px; 
-    display: block;     
-    margin: 0 auto;     
-  }
+h1 {
+  text-align: center;
+  color: goldenrod;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
 
-  #Epfp {
-    margin-top: 15px;
-    text-align: center; 
-  }
-  
-  #Epfp img {
-    max-width: 80%;    
-    max-height: 80%;       
-    border-radius: 8px; 
-    display: block;     
-    margin: 0 auto;     
-  }
+#teacherSUCard {
+  background-color: #fff8e1;
+  border: 1px solid #ffd54f;
+  border-radius: 12px;
+  display:flex;
+  justify-self:center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items:center;
+  flex-direction:column;
+  margin-bottom:30px;
+  padding:20px;
+  width:320px;
+}
 
-  .contact-card h2 {
-    color: #c29300;
-  }
-  
-  .contact-card h3 {
-    margin-bottom: 10px;
-    color: #555;
-  }
+#teacherSUCard h2 {
+  color: #c29300;
+}
 
-  .contact-card a {
-    color: #0073e6;
-    text-decoration: none;
-  }
+#teacherSUCard a {
+  color: #0073e6;
+  text-decoration: none;
+}
   
-  .contact-card a:hover {
-    text-decoration: underline;
-  }
+#teacherSUCard a:hover {
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  
+.contact-card {
+  background-color: #fff8e1;
+  border: 1px solid #ffd54f;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 calc(45% - 30px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  max-width: 500px;
+}
+  
+#Cpfp {
+  margin-top: 15px;
+  text-align: center; 
+}
+  
+#Cpfp img {
+  max-width: 100%;    
+  height: auto;       
+  border-radius: 8px; 
+  display: block;     
+  margin: 0 auto;     
+}
+
+#Bpfp {
+  margin-top: 15px;
+  text-align: center; 
+}
+  
+#Bpfp img {
+  max-width: 95%;    
+  max-height: 75%;       
+  border-radius: 8px; 
+  display: block;     
+  margin: 0 auto;     
+}
+
+#Epfp {
+  margin-top: 15px;
+  text-align: center; 
+}
+  
+#Epfp img {
+  max-width: 80%;    
+  max-height: 80%;       
+  border-radius: 8px; 
+  display: block;     
+  margin: 0 auto;     
+}
+
+#STRpfp {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#STRpfp img{
+  max-width: 65%;    
+  max-height: 65%;       
+  border-radius: 8px; 
+  display: block;     
+  margin: 0 auto;  
+}
+
+.contact-card h2 {
+  color: #c29300;
+}
+  
+.contact-card h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-card a {
+  color: #0073e6;
+  text-decoration: none;
+}
+  
+.contact-card a:hover {
+  text-decoration: underline;
+}
