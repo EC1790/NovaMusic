@@ -54,10 +54,6 @@ def EC():
 def KD():
     return render_template("KD.html")
 
-@app.route('/TC')
-def TC():
-    return render_template("TC.html")
-
 @app.route('/JK')
 def JK():
     return render_template("JK.html")
@@ -127,4 +123,3 @@ init_db()  # Always run this when the app starts
 
 if __name__ == '__main__':
     app.run(debug=True)
-
