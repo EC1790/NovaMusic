@@ -66,6 +66,10 @@ def FH():
 def VS():
     return render_template("VS.html")
 
+@app.route('/AS')
+def AS():
+    return render_template("AS.html")
+
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html")
