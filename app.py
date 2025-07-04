@@ -70,6 +70,10 @@ def VS():
 def AS():
     return render_template("AS.html")
 
+@app.route('/RA')
+def RA():
+    return render_template("RA.html")
+
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html")
