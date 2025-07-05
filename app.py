@@ -74,6 +74,8 @@ def AS():
 def RA():
     return render_template("RA.html")
 
+
+
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html")
