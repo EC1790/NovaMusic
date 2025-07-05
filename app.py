@@ -74,7 +74,13 @@ def AS():
 def RA():
     return render_template("RA.html")
 
+@app.route('/JW')
+def JW():
+    return render_template("JW.html")
 
+@app.route('/MP')
+def MP():
+    return render_template("MP.html")
 
 @app.route('/SignUp')
 def SignUp():
