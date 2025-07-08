@@ -42,10 +42,7 @@ def Instruments():
 def Lessons():
     return render_template("lessons.html")
 
-@app.route('/ET')
-def ET():
-    return render_template("ET.html")
-
+# Routing for flute teachers
 @app.route('/EC')
 def EC():
     return render_template("EC.html")
@@ -54,33 +51,53 @@ def EC():
 def KD():
     return render_template("KD.html")
 
+# Routing for saxophone teachers
+@app.route('/AS')
+def AS():
+    return render_template("AS.html")
+
 @app.route('/JK')
 def JK():
     return render_template("JK.html")
+
+# Routing for trombone teachers
+@app.route('/VS')
+def VS():
+    return render_template("VS.html")
+
+# Routing for piano teachers
+@app.route('/RA')
+def RA():
+    return render_template("RA.html")
+
+# Routing for guitar teachers
+@app.route('/ET')
+def ET():
+    return render_template("ET.html")
 
 @app.route('/FH')
 def FH():
     return render_template("FH.html")
 
-@app.route('/VS')
-def VS():
-    return render_template("VS.html")
-
-@app.route('/AS')
-def AS():
-    return render_template("AS.html")
-
-@app.route('/RA')
-def RA():
-    return render_template("RA.html")
-
+# Routing for drum teachers
 @app.route('/JW')
 def JW():
     return render_template("JW.html")
 
+# Routing for violin teachers
+@app.route('/AB')
+def AB():
+    return render_template("AB.html")
+
+# Routing for trumpet teachers
 @app.route('/MP')
 def MP():
     return render_template("MP.html")
+
+
+@app.route('/JB')
+def JB():
+    return render_template("JB.html")
 
 @app.route('/SignUp')
 def SignUp():
