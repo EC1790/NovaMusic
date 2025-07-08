@@ -84,15 +84,15 @@ def FH():
 def JW():
     return render_template("JW.html")
 
-# Routing for violin teachers
+# Routing for multi-instrumental teachers
 @app.route('/AB')
 def AB():
     return render_template("AB.html")
 
-
 @app.route('/JB')
 def JB():
     return render_template("JB.html")
+
 
 @app.route('/SignUp')
 def SignUp():
