@@ -98,6 +98,9 @@ def AB():
 def JB():
     return render_template("JB.html")
 
+@app.route('/HF1')
+def HF1():
+    return render_template("HF1.html")
 
 @app.route('/SignUp')
 def SignUp():
