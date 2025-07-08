@@ -84,6 +84,11 @@ def FH():
 def JW():
     return render_template("JW.html")
 
+# Routing for French horn teachers
+@app.route('/IY')
+def IY():
+    return render_template("IY.html")
+
 # Routing for multi-instrumental teachers
 @app.route('/AB')
 def AB():
