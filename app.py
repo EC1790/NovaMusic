@@ -89,11 +89,6 @@ def JW():
 def AB():
     return render_template("AB.html")
 
-# Routing for trumpet teachers
-@app.route('/MP')
-def MP():
-    return render_template("MP.html")
-
 
 @app.route('/JB')
 def JB():
