@@ -102,6 +102,10 @@ def JB():
 def HF1():
     return render_template("HF1.html")
 
+@app.route('/HF2')
+def HF2():
+    return render_template("HF2.html")
+
 @app.route('/SignUp')
 def SignUp():
     return render_template("signup.html")
