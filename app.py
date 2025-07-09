@@ -74,6 +74,10 @@ def RA():
 def HO():
     return render_template("HO.html")
 
+@app.route('/HB')
+def HB():
+    return render_template("HB.html")
+
 # Routing for guitar teachers
 @app.route('/ET')
 def ET():
