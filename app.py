@@ -70,6 +70,10 @@ def VS():
 def RA():
     return render_template("RA.html")
 
+@app.route('/HO')
+def HO():
+    return render_template("HO.html")
+
 # Routing for guitar teachers
 @app.route('/ET')
 def ET():
