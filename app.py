@@ -92,6 +92,10 @@ def FH():
 def JW():
     return render_template("JW.html")
 
+@app.route('/YM')
+def YM():
+    return render_template("YM.html")
+
 # Routing for French horn teachers
 @app.route('/IY')
 def IY():
