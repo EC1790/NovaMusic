@@ -91,6 +91,10 @@ def ET():
 def FH():
     return render_template("FH.html")
 
+@app.route('/AS1')
+def AS1():
+    return render_template("AS1.html")
+
 # Routing for drum teachers
 @app.route('/JW')
 def JW():
