@@ -110,9 +110,9 @@ def AB():
 def JB():
     return render_template("JB.html")
 
-@app.route('/HF1')
-def HF1():
-    return render_template("HF1.html")
+@app.route('/HF')
+def HF():
+    return render_template("HF.html")
 
 @app.route('/SignUp')
 def SignUp():
