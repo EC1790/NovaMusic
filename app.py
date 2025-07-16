@@ -70,10 +70,6 @@ def VS():
 def RA():
     return render_template("RA.html")
 
-@app.route('/HO')
-def HO():
-    return render_template("HO.html")
-
 @app.route('/HB')
 def HB():
     return render_template("HB.html")
