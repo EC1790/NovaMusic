@@ -82,6 +82,10 @@ def HB():
 def JH():
     return render_template("JH.html")
 
+@app.route('/PA')
+def PA():
+    return render_template("PA.html")
+
 # Routing for guitar teachers
 @app.route('/ET')
 def ET():
