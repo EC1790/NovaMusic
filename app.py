@@ -187,10 +187,10 @@ def force_https_and_www():
     if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
         return redirect(request.url.replace('http://', 'https://'), code=301)
 
-    # 2. Optionally force no-www (or the opposite)
-    if request.host.startswith('www.'):
-        url = request.url.replace('://www.', '://')
-        return redirect(url, code=301)
+    if not request.host.startswith('www.'):
+    url = request.url.replace('://', '://www.')
+    return redirect(url, code=301)
+
 
 
 if __name__ == '__main__':
