@@ -1,24 +1,16 @@
-from flask import Flask, request, jsonify, render_template, redirect
+'''flask file: app.py provides methods for managing calendar events, including adding,
+    retrieving, and deleting events from the database. It interfaces with an
+    SQLite backend and is designed to support API operations in a Flask
+    web application.
+'''
+
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
 CORS(app)
 
-@app.before_request
-def redirect_to_https_and_www():
-    forwarded_proto = request.headers.get('X-Forwarded-Proto', request.scheme)
-    host = request.host
-
-    if forwarded_proto == 'https' and host.startswith('www.'):
-        return
-
-    url = request.url
-    if forwarded_proto != 'https':
-        url = url.replace("http://", "https://", 1)
-    if not host.startswith("www."):
-        url = url.replace("://", "://www.", 1)
-    return redirect(url, code=301)
 
 def init_db():
     conn = sqlite3.connect("events.db")
@@ -34,13 +26,10 @@ def init_db():
     conn.commit()
     conn.close()
 
+'''Routes to all the different pages'''
 @app.route('/')
 def index():
     return render_template("index.html")
-
-# ... all your other routes remain unchanged ...
-
-init_db()
 
 @app.route('/Contact')
 def Contact():
@@ -54,8 +43,8 @@ def Instruments():
 def Lessons():
     return render_template("lessons.html")
 
-# Teacher routing
-@app.route('/EC')  # Flute
+# Routing for flute teachers
+@app.route('/EC')
 def EC():
     return render_template("EC.html")
 
@@ -63,7 +52,8 @@ def EC():
 def KD():
     return render_template("KD.html")
 
-@app.route('/AS')  # Saxophone
+# Routing for saxophone teachers
+@app.route('/AS')
 def AS():
     return render_template("AS.html")
 
@@ -71,11 +61,13 @@ def AS():
 def JK():
     return render_template("JK.html")
 
-@app.route('/VS')  # Trombone
+# Routing for trombone teachers
+@app.route('/VS')
 def VS():
     return render_template("VS.html")
 
-@app.route('/RA')  # Piano
+# Routing for piano teachers
+@app.route('/RA')
 def RA():
     return render_template("RA.html")
 
@@ -91,7 +83,8 @@ def JH():
 def PA():
     return render_template("PA.html")
 
-@app.route('/ET')  # Guitar
+# Routing for guitar teachers
+@app.route('/ET')
 def ET():
     return render_template("ET.html")
 
@@ -103,7 +96,8 @@ def FH():
 def AS1():
     return render_template("AS1.html")
 
-@app.route('/JW')  # Drums
+# Routing for drum teachers
+@app.route('/JW')
 def JW():
     return render_template("JW.html")
 
@@ -111,11 +105,13 @@ def JW():
 def YM():
     return render_template("YM.html")
 
-@app.route('/IY')  # French horn
+# Routing for French horn teachers
+@app.route('/IY')
 def IY():
     return render_template("IY.html")
 
-@app.route('/AB')  # Multi-instrumental
+# Routing for multi-instrumental teachers
+@app.route('/AB')
 def AB():
     return render_template("AB.html")
 
@@ -134,7 +130,8 @@ def SignUp():
 @app.route('/navbar')
 def navbar():
     return render_template('navbar.html')
-
+    
+'''Gets events from the db'''
 @app.route('/events', methods=['GET'])
 def get_events():
     conn = sqlite3.connect("events.db")
@@ -149,6 +146,7 @@ def get_events():
     ]
     return jsonify(events)
 
+'''Adds events into the db'''
 @app.route('/events', methods=['POST'])
 def add_event():
     data = request.get_json()
@@ -168,6 +166,7 @@ def add_event():
 
     return jsonify({"id": new_id, "date": date, "title": title, "description": description})
 
+'''Deletes events from the db'''
 @app.route('/events/<int:event_id>', methods=['DELETE'])
 def delete_event(event_id):
     conn = sqlite3.connect("events.db")
@@ -177,7 +176,23 @@ def delete_event(event_id):
     conn.close()
     return '', 200
 
-init_db()
+init_db()  # Always run this when the app starts
+
+from flask import Flask, request, redirect
+
+app = Flask(__name__)
+
+@app.before_request
+def force_https_and_www():
+    # 1. Force HTTPS
+    if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
+        return redirect(request.url.replace('http://', 'https://'), code=301)
+
+    if not request.host.startswith('www.'):
+    url = request.url.replace('://', '://www.')
+    return redirect(url, code=301)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
