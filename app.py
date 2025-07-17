@@ -3,28 +3,31 @@
     SQLite backend and is designed to support API operations in a Flask
     web application.
 '''
-
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import sqlite3
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
-
 
 def init_db():
     conn = sqlite3.connect("events.db")
     cursor = conn.cursor()
-    cursor.execute('''
+    cursor.execute(
+        """
         CREATE TABLE IF NOT EXISTS events (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             date TEXT,
             title TEXT,
             description TEXT
         )
-    ''')
+        """
+    )
     conn.commit()
     conn.close()
+
+init_db()
 
 '''Routes to all the different pages'''
 @app.route('/')
