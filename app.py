@@ -4,12 +4,11 @@
     web application.
 '''
 from flask import Flask, request, jsonify, render_template
+app = Flask(__name__)
 from flask_cors import CORS
 import sqlite3
 import os
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
-CORS(app)
 
 def init_db():
     conn = sqlite3.connect("events.db")
@@ -179,11 +178,6 @@ def delete_event(event_id):
     conn.close()
     return '', 200
 
-init_db()  # Always run this when the app starts
-
-from flask import Flask, request, redirect
-
-app = Flask(__name__)
 
 
 if __name__ == '__main__':
