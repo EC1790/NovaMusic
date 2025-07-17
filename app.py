@@ -7,24 +7,18 @@ CORS(app)
 
 @app.before_request
 def redirect_to_https_and_www():
-    forwarded_proto = request.headers.get('X-Forwarded-Proto', 'http')
+    forwarded_proto = request.headers.get('X-Forwarded-Proto', request.scheme)
     host = request.host
 
-    # Check if both HTTPS and www are already correct
     if forwarded_proto == 'https' and host.startswith('www.'):
-        return  # No redirect needed
+        return
 
-    # Build the new URL with https and www
     url = request.url
-
     if forwarded_proto != 'https':
-        url = url.replace("http://", "https://")
-
+        url = url.replace("http://", "https://", 1)
     if not host.startswith("www."):
-        url = url.replace("://", "://www.")
-
+        url = url.replace("://", "://www.", 1)
     return redirect(url, code=301)
-
 
 def init_db():
     conn = sqlite3.connect("events.db")
@@ -43,6 +37,10 @@ def init_db():
 @app.route('/')
 def index():
     return render_template("index.html")
+
+# ... all your other routes remain unchanged ...
+
+init_db()
 
 @app.route('/Contact')
 def Contact():
