@@ -177,5 +177,21 @@ def delete_event(event_id):
 
 init_db()  # Always run this when the app starts
 
+from flask import Flask, request, redirect
+
+app = Flask(__name__)
+
+@app.before_request
+def force_https_and_www():
+    # 1. Force HTTPS
+    if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
+        return redirect(request.url.replace('http://', 'https://'), code=301)
+
+    # 2. Optionally force no-www (or the opposite)
+    if request.host.startswith('www.'):
+        url = request.url.replace('://www.', '://')
+        return redirect(url, code=301)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
