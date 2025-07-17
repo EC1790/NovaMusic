@@ -5,17 +5,26 @@ import sqlite3
 app = Flask(__name__)
 CORS(app)
 
-# Force HTTPS and optionally redirect to www
 @app.before_request
-def force_https_and_www():
-    # Force HTTPS
-    if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
-        return redirect(request.url.replace('http://', 'https://'), code=301)
+def redirect_to_https_and_www():
+    forwarded_proto = request.headers.get('X-Forwarded-Proto', 'http')
+    host = request.host
 
-    # Optional: force www.
-    if not request.host.startswith('www.'):
-        url = request.url.replace('://', '://www.')
-        return redirect(url, code=301)
+    # Check if both HTTPS and www are already correct
+    if forwarded_proto == 'https' and host.startswith('www.'):
+        return  # No redirect needed
+
+    # Build the new URL with https and www
+    url = request.url
+
+    if forwarded_proto != 'https':
+        url = url.replace("http://", "https://")
+
+    if not host.startswith("www."):
+        url = url.replace("://", "://www.")
+
+    return redirect(url, code=301)
+
 
 def init_db():
     conn = sqlite3.connect("events.db")
