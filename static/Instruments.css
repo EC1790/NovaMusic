@@ -2,52 +2,60 @@
 Styles using goldenrod, black and white
 */
 body {
-    background-color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: scroll;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 48px;
-    color: goldenrod;
-    margin-top: 40px;
-  }
-  
-  h2 {
-    color: goldenrod;
-    font-size: 28px;
-  }
-  
-  .instrument {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .instrument ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .instrument li {
-    background-color: #f5f5f5;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .instrument a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .instrument a:hover {
-    color: goldenrod;
-  }
-  
- 
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: goldenrod;
+  margin-top: 40px;
+}
+
+h2 {
+  color: goldenrod;
+  font-size: 28px;
+}
+
+h2:hover {
+  background-color:lightgray;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.instrument {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.instrument ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.instrument li {
+  background-color: #f5f5f5;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.instrument a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.instrument a:hover {
+  color: goldenrod;
+}
+
+.dropdown-content {
+  transition: all 0.3s ease-in-out;
+}
